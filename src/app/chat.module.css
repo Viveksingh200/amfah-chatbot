@@ -1,8 +1,10 @@
 .container {
-  width: 380px;
-  height: 650px;
+  width: 340px;
+  height: 540px;
+  max-width: calc(100vw - 32px);
+  max-height: calc(100vh - 32px);
   background: #ffffff;
-  border-radius: 24px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -14,7 +16,7 @@
 .header {
   position: relative;
   background: linear-gradient(135deg, #3b28cc 0%, #00d2ff 100%);
-  padding: 0 0 40px 0;
+  padding: 0 0 28px 0;
   display: flex;
   flex-direction: column;
   color: white;
@@ -30,19 +32,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 24px 0 24px;
+  padding: 14px 16px 0 16px;
   z-index: 2;
 }
 
 .headerProfile {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .avatar {
-  width: 48px;
-  height: 48px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid rgba(255, 255, 255, 0.2);
@@ -55,14 +57,14 @@
 }
 
 .subTitle {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 500;
   opacity: 0.9;
   margin: 0;
 }
 
 .mainTitle {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   margin: 0;
 }
@@ -70,13 +72,13 @@
 .headerIcons {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   opacity: 0.8;
 }
 
 .onlineStatus {
-  padding: 12px 24px 0 24px;
-  font-size: 0.85rem;
+  padding: 6px 16px 0 16px;
+  font-size: 0.78rem;
   font-weight: 500;
   opacity: 0.9;
   z-index: 2;
@@ -84,11 +86,11 @@
 
 .chatArea {
   flex: 1;
-  padding: 8px 20px 24px 20px;
+  padding: 6px 14px 14px 14px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 10px;
   background: #fdfdfd;
 }
 
@@ -96,7 +98,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 6px;
+  gap: 4px;
 }
 
 .messageWrapper {
@@ -115,16 +117,16 @@
 
 .message {
   max-width: 85%;
-  padding: 12px 18px;
-  border-radius: 20px;
-  font-size: 0.92rem;
-  line-height: 1.5;
+  padding: 8px 12px;
+  border-radius: 16px;
+  font-size: 0.82rem;
+  line-height: 1.4;
   word-wrap: break-word;
 }
 
 .message p {
   margin-top: 0;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .message p:last-child {
@@ -147,17 +149,17 @@
 .typingIndicator {
   display: flex;
   gap: 4px;
-  padding: 14px 20px;
+  padding: 8px 14px;
   background: #f1f5f9;
-  border-radius: 20px;
+  border-radius: 16px;
   border-bottom-left-radius: 4px;
   width: fit-content;
   align-items: center;
 }
 
 .dot {
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   background-color: #94a3b8;
   border-radius: 50%;
   animation: bounce 1.4s infinite ease-in-out both;
@@ -176,8 +178,8 @@
   flex-wrap: wrap;
   flex-direction: column;
   align-items: flex-end;
-  gap: 8px;
-  margin-top: 4px;
+  gap: 6px;
+  margin-top: 2px;
   width: 100%;
   align-self: flex-end;
 }
@@ -186,9 +188,9 @@
   background: transparent;
   border: 1.5px solid #3b82f6;
   border-radius: 999px;
-  padding: 8px 16px;
+  padding: 5px 12px;
   color: #3b82f6;
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -215,19 +217,19 @@
 .inputContainer {
   position: relative;
   background: white;
-  padding: 16px 20px;
+  padding: 10px 14px;
   border-top: 1px solid #e2e8f0;
 }
 
 .inputForm {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
 }
 
 .inputIcons {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   color: #94a3b8;
 }
 
@@ -244,9 +246,9 @@
   flex: 1;
   background: transparent;
   border: none;
-  padding: 8px 0;
+  padding: 4px 36px 4px 0;
   color: #334155;
-  font-size: 0.95rem;
+  font-size: 0.84rem;
   outline: none;
 }
 
@@ -258,8 +260,8 @@
   background: linear-gradient(135deg, #1d4ed8 0%, #06b6d4 100%);
   border: none;
   border-radius: 50%;
-  width: 48px;
-  height: 48px;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -268,9 +270,14 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   box-shadow: 0 4px 12px rgba(6, 182, 212, 0.4);
   position: absolute;
-  right: 16px;
-  bottom: 16px;
+  right: 10px;
+  bottom: 8px;
   z-index: 10;
+}
+
+.sendButton svg {
+  width: 18px;
+  height: 18px;
 }
 
 .sendButton:hover:not(:disabled) {
