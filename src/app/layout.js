@@ -20,9 +20,10 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full w-full antialiased`}
+      style={{ margin: 0, padding: 0 }}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="h-full w-full m-0 p-0 overflow-hidden flex flex-col">{children}</body>
     </html>
   );
 }
